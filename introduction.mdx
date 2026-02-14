@@ -1,0 +1,116 @@
+---
+title: Introduction to Vincent v.B.
+description: Discover Vincent v.B., a powerful documentation management platform designed to help you organize, create, and share project documentation efficiently.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+Vincent v.B. is a comprehensive documentation management platform that empowers you to create, organize, and share project documentation with ease. You can build structured docs sites, collaborate with teams in real-time, and publish polished documentation without needing advanced technical skills.
+
+This platform suits developers, product managers, and technical writers who need a centralized space for API references, user guides, and changelogs. Whether you manage open-source projects or internal knowledge bases, Vincent v.B. streamlines your workflow and ensures your documentation stays up-to-date and accessible.
+
+## Key Features
+
+Vincent v.B. offers powerful tools to enhance your documentation experience. Explore the core capabilities below.
+
+<Columns cols={3}>
+  <Card title="Rich Editor" icon="edit-3" href="#rich-editor">
+    Create content with a intuitive WYSIWYG editor supporting Markdown, code blocks, and embeds.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes with Git integration and maintain multiple document versions effortlessly.
+  </Card>
+  <Card title="Collaboration" icon="users" href="#collaboration">
+    Invite team members, assign roles, and review changes in real-time.
+  </Card>
+  <Card title="Custom Domains" icon="globe" href="#custom-domains">
+    Publish your docs on branded domains with SEO optimization and analytics.
+  </Card>
+</Columns>
+
+## Who It's For
+
+You will benefit from Vincent v.B. if you:
+
+- Maintain technical documentation for software projects
+- Need collaborative tools for distributed teams
+- Want to generate dynamic docs from OpenAPI specs or codebases
+- Seek a no-code solution for non-technical users alongside developer-friendly features
+
+## Quick Start
+
+Get up and running in minutes with these essential steps.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+
+    Visit `https://app.vincentvb.com` and create a free account using your email or GitHub.
+
+  </Step>
+  <Step title="Create Project" icon="plus">
+
+    Click **New Project** and select a template for API docs, user guides, or changelog.
+
+  </Step>
+  <Step title="Add Content" icon="edit-3">
+
+    Use the editor to write your first page. Start with Markdown:
+
+````markdown
+# Welcome
+
+This is your first document.
+````
+
+  </Step>
+  <Step title="Publish" icon="globe">
+
+    Preview changes, then click **Publish** to deploy your site.
+
+  </Step>
+</Steps>
+
+<CodeGroup tabs="CLI,REST API">
+````bash
+# Install CLI
+npm install -g @vincentvb/cli
+
+# Initialize project
+vincent init my-docs
+````
+````javascript
+// API call to create project
+fetch('https://api.vincentvb.com/v1/projects', {
+  method: 'POST',
+  headers: { 'Authorization': `Bearer ${YOUR_API_KEY}` },
+  body: JSON.stringify({ name: 'My Docs' })
+});
+````
+</CodeGroup>
+
+## Next Steps
+
+Dive deeper into Vincent v.B. with these guides.
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="zap" href="/quickstart">
+    Set up your first full documentation site.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your projects with API keys and OAuth.
+  </Card>
+  <Card title="Customization" icon="settings" href="/configuration">
+    Tailor themes, layouts, and integrations.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Track updates and new features.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Begin with the [Quickstart](/quickstart) guide to build your first project. Customize these docs to match your needs!
+</Callout>

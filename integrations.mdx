@@ -1,0 +1,127 @@
+---
+title: Integrations and Extensions
+description: Learn how to connect Vincent v.B. with other tools to enhance your documentation workflow.
+---
+
+## Overview
+
+Vincent v.B. supports seamless integrations with popular third-party tools, webhooks for automation, export/import capabilities, and a robust API for custom solutions. These features enable you to automate workflows, sync data across platforms, and extend functionality without leaving your documentation environment.
+
+<Callout kind="info">
+Review your integration needs and ensure you have the necessary API keys or permissions from external services before proceeding.
+</Callout>
+
+## Popular Third-Party Integrations
+
+Connect Vincent v.B. to essential tools for collaboration, version control, and deployment. Use the dashboard at `https://dashboard.vincentvb.com/integrations` to enable these connections.
+
+<Columns cols={3}>
+  <Card title="GitHub" icon="github" href="https://github.com" target="_blank">
+    Sync documentation repos and trigger builds on updates.
+  </Card>
+  <Card title="Slack" icon="message-circle" href="https://slack.com" target="_blank">
+    Send notifications for doc changes and approvals.
+  </Card>
+  <Card title="Zapier" icon="zap" href="https://zapier.com" target="_blank">
+    Create no-code automations with 5,000+ apps.
+  </Card>
+</Columns>
+
+## Setting Up Webhooks
+
+Webhooks allow external services to receive real-time updates from Vincent v.B., such as page publishes or comments. Follow these steps to configure a webhook.
+
+<Steps>
+  <Step title="Create Webhook" icon="plus">
+    Navigate to Settings > Webhooks in your dashboard.
+    
+    Enter your webhook URL, e.g., `https://your-webhook-url.com/vincentvb`.
+  </Step>
+  <Step title="Select Events" icon="settings">
+    Choose events like `page.updated` or `comment.added`.
+  </Step>
+  <Step title="Test and Save" icon="check-circle">
+    Send a test payload and verify receipt.
+  </Step>
+</Steps>
+
+Example webhook payload:
+
+````json
+{
+  "event": "page.updated",
+  "page_id": "doc-12345",
+  "timestamp": "2024-01-15T10:30:00Z",
+  "user_id": "user-67890"
+}
+````
+
+## Export and Import Options
+
+Export your documentation for backups or migration, or import from other formats to get started quickly.
+
+<Tabs>
+  <Tab title="Export" icon="download">
+    From the dashboard, select Export > Format.
+    
+    <CodeGroup tabs="Markdown,PDF,HTML">
+    ````bash
+    curl -H "Authorization: Bearer YOUR_API_KEY" \
+         https://api.example.com/v1/export/markdown \
+         -o docs.zip
+    ````
+    ````bash
+    # PDF export via dashboard UI
+    # Generates printable PDF bundle
+    ````
+    ````bash
+    curl -H "Authorization: Bearer YOUR_API_KEY" \
+         https://api.example.com/v1/export/html \
+         -o site.zip
+    ````
+    </CodeGroup>
+  </Tab>
+  <Tab title="Import" icon="upload">
+    Upload files via dashboard or API.
+    
+    Supported formats: Markdown, HTML, JSON.
+  </Tab>
+</Tabs>
+
+## Custom Integrations via API
+
+Build tailored solutions using Vincent v.B.'s REST API at `https://api.example.com/v1`. Authenticate with `YOUR_API_KEY`.
+
+<ParamField path="project_id" param-type="string" required="true">
+  Your Vincent v.B. project identifier.
+</ParamField>
+
+<ParamField header="Authorization" param-type="string" required="true">
+  Bearer token: `Bearer YOUR_API_KEY`.
+</ParamField>
+
+Example: Fetch recent pages.
+
+<CodeGroup tabs="JavaScript,cURL">
+````javascript
+const response = await fetch('https://api.example.com/v1/pages', {
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY'
+  }
+});
+const pages = await response.json();
+console.log(pages);
+````
+````bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     https://api.example.com/v1/pages
+````
+</CodeGroup>
+
+<Expandable title="Advanced API Usage" default-open="false">
+  Use query params for filtering: `?limit=10&status=published`.
+</Expandable>
+
+<Callout kind="tip">
+  Explore the full API reference next or check [Quickstart](/quickstart) for authentication setup.
+</Callout>

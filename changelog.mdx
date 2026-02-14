@@ -1,0 +1,140 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and fixes in Vincent v.B. to stay informed about new features.
+---
+
+## Recent Releases
+
+Stay current with Vincent v.B. by reviewing the latest releases. Each version includes new features, performance improvements, and bug fixes to enhance your documentation experience.
+
+<Callout kind="info">
+  Bookmark this page and check back regularly for updates. You receive notifications via email when major versions release.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for teams to edit docs simultaneously
+- Introduced version history with diff viewer to compare changes
+- New search filters for tags, authors, and update dates
+
+## Improvements
+
+- Enhanced editor performance with 40% faster rendering
+- Improved mobile responsiveness for better on-the-go editing
+
+## Bug Fixes
+
+- Fixed export to PDF failing on pages with images
+- Resolved authentication issues during long sessions
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated GitHub sync for seamless version control
+- Added custom themes using your brand color `#3B82F6`
+
+## Improvements
+
+- Optimized database queries for faster page loads
+
+## Bug Fixes
+
+- Corrected table rendering errors in preview mode
+- Fixed link validation for external URLs
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core documentation editor with Markdown and MDX support
+- User authentication via email or OAuth
+- Basic dashboard for project overview
+
+## Breaking Changes
+
+- Updated API endpoints to use `{version}` prefix in paths
+
+## Bug Fixes
+
+- Initial stability improvements
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to upgrade Vincent v.B. to the latest version. Always back up your data first.
+
+<Steps>
+  <Step title="Backup Data" icon="database">
+
+  Export your projects:
+
+  ````bash
+  vincent export --all --output ./backup
+  ````
+
+  </Step>
+  <Step title="Update Package" icon="download">
+
+  <CodeGroup tabs="npm,yarn">
+  ````bash
+  npm install vincent@latest
+  ````
+  ````bash
+  yarn add vincent@latest
+  ````
+  </CodeGroup>
+
+  </Step>
+  <Step title="Run Migration" icon="settings">
+
+  ````bash
+  vincent migrate --version 1.2.0
+  ````
+
+  Verify with `vincent --version`.
+
+  </Step>
+  <Step title="Restart Service" icon="refresh-cw">
+
+  Restart your Vincent instance and test key features.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Test upgrades in a staging environment first to avoid disruptions.
+</Callout>
+
+## Upcoming Roadmap
+
+Discover what's next for Vincent v.B. These features are in development.
+
+<Columns cols={3}>
+  <Card title="AI Assistant" icon="bot" href="#">
+    Automated content suggestions and summaries powered by AI.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart-3" href="#">
+    Track document views, engagement, and popular sections.
+  </Card>
+  <Card title="Plugin System" icon="puzzle" href="#">
+    Extend functionality with community plugins.
+  </Card>
+</Columns>
+
+<Expandable title="Detailed Roadmap Timeline" default-open="false">
+
+| Quarter | Key Milestones |
+|---------|----------------|
+| Q4 2024 | AI Assistant beta, Analytics dashboard |
+| Q1 2025 | Plugin marketplace launch |
+| Q2 2025 | Enterprise features: SSO, audit logs |
+
+</Expandable>

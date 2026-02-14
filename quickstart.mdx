@@ -1,0 +1,123 @@
+---
+title: Getting Started with Vincent v.B.
+description: Follow these steps to set up your account and create your first documentation space in under 5 minutes.
+---
+
+<Callout kind="info" title="Prerequisites">
+Before starting, ensure you have:
+- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- An email address for account verification
+- Optional: Google account for quick sign-up
+</Callout>
+
+## Sign Up and Log In
+
+Create your Vincent v.B. account in seconds. Choose your preferred method below.
+
+<Tabs>
+  <Tab title="Email" icon="mail">
+    Visit [https://app.vincentvb.com/signup](https://app.vincentvb.com/signup) and enter your email and password.
+    
+    Verify your email via the confirmation link sent to your inbox.
+  </Tab>
+  
+  <Tab title="Google" icon="apple">
+    Click the Google button on the sign-up page and authorize Vincent v.B.
+    
+    No additional verification needed.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+Save your login details securely. Use a password manager for best security.
+</Callout>
+
+## Create Your First Documentation Space
+
+Once logged in, follow these steps to set up your project.
+
+<Steps>
+  <Step title="Navigate to Dashboard" icon="home">
+    Click **New Space** from the dashboard.
+  </Step>
+  
+  <Step title="Configure Space" icon="settings">
+    Enter a name like `My Project Docs`.
+    
+    Select your brand color (`#3B82F6`) and add a description: "Welcome to Vincent v.B.'s documentation."
+  </Step>
+  
+  <Step title="Generate Starter Pages" icon="file-plus">
+    Choose **Quickstart Template** to auto-generate pages like introduction and changelog.
+  </Step>
+</Steps>
+
+## Basic Interface Tour
+
+<Expandable title="Editor Overview" default-open="true">
+The main editor supports live MDX previews. Key sections include:
+
+- **Sidebar**: Navigation, page tree, and settings
+- **Editor Pane**: Write in Markdown with JSX components
+- **Preview Pane**: Real-time rendering
+- **Publish Button**: Deploy changes instantly
+
+Use the search bar to find components like `<Callout>` or `<Steps>`.
+</Expandable>
+
+<Expandable title="Advanced Features">
+Explore version history, collaboration invites, and custom domains in the settings panel.
+</Expandable>
+
+## Upload Initial Content
+
+Add your first page content using MDX syntax.
+
+<CodeGroup tabs="Frontmatter,Components">
+  ```yaml
+  ---
+  title: My First Page
+  description: Sample content
+  ---
+  
+  ## Hello World
+  
+  This is your starting point.
+  ```
+  
+  ```jsx
+  <Callout kind="success">
+    Content renders live!
+  </Callout>
+  
+  <Steps>
+    <Step title="Edit">Modify and save.</Step>
+  </Steps>
+  ```
+</CodeGroup>
+
+Publish by clicking **Deploy** in the top-right corner. Your site updates at `https://your-space.vincentvb.com`.
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Customize Pages" icon="edit-3" href="/introduction">
+    Edit generated pages to match your brand.
+  </Card>
+  
+  <Card title="Add Authentication" icon="shield" href="/authentication">
+    Secure your docs with user logins.
+  </Card>
+  
+  <Card title="Explore Components" icon="layers">
+    Dive into advanced UI elements.
+  </Card>
+  
+  <Card title="View Changelog" icon="git-branch" href="/changelog">
+    Track updates and new features.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+Congratulations! Your documentation space is live. Share the URL with your team.
+</Callout>
